@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agrofield - About</title>
+  <style>
+    /* Common Styles */
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f5f5f5; }
+    a { text-decoration: none; color: inherit; cursor: pointer; }
+    header { background-color: #fff; border-bottom: 1px solid #ddd; }
+    .top-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 20px; background-color: #333; color: #fff;
+    }
+    .top-bar .logo { font-size: 1.8em; font-weight: bold; }
+    .top-bar .nav-links { display: flex; align-items: center; }
+    .top-bar .nav-links a { margin: 0 10px; color: #fff; font-size: 0.9em; }
+    .search-container { margin-left: 20px; }
+    .search-container input[type="text"] { padding: 5px 10px; border-radius: 3px; border: none; width: 200px; }
+    /* Hero Section */
+    .hero {
+      text-align: center; padding: 60px 20px;
+      background: url('https://eiwpyksmmiv.exactdn.com/wp-content/uploads/2023/10/img-blog-elements-of-a-successful-public-relations-conference-1500x550.webp?strip=all&lossy=1&ssl=1')
+                 no-repeat center center/cover; color: white;
+    }
+    .hero h1 { font-size: 4em; margin: 0; }
+    .hero p { font-size: 2em; margin-top: 20px; }
+    /* Main Content */
+    .container { max-width: 1200px; margin: 20px auto; background: #fff; padding: 20px; }
+    .section { margin-bottom: 40px; }
+    .section h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+    /* Footer */
+    footer { background: #333; color: #fff; text-align: center; padding: 20px; margin-top: 20px; }
+    footer .footer-links a { margin: 0 10px; font-size: 0.9em; color: #fff; }
+    footer .social-icons a { margin: 0 5px; font-size: 1.2em; }
+    /* Modal CSS */
+    .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
+             background-color: rgba(0,0,0,0.5); }
+    .modal:target { display: block; }
+    .modal-content {
+      background-color: #fff; margin: 10% auto; padding: 30px; border: 1px solid #888;
+      width: 90%; max-width: 400px; border-radius: 5px; position: relative;
+    }
+    .close { color: #aaa; font-size: 24px; font-weight: bold; position: absolute; right: 10px; top: 5px; }
+    .close:hover { color: #000; }
+    .modal form input[type="text"],
+    .modal form input[type="email"],
+    .modal form input[type="password"] {
+      width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 3px;
+    }
+    .modal form input[type="submit"] {
+      width: 100%; padding: 10px; background: #333; color: #fff; border: none; border-radius: 3px; cursor: pointer;
+    }
+  </style>
+</head>
+<body style="background-color: #800000;">
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <div class="logo">Agrofield</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="#signInModal">Sign In</a>
+        <a href="#signUpModal">Sign Up</a>
+        <div class="search-container">
+          <form action="search.html" method="get">
+            <input type="text" name="q" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <h1>About Agrofield</h1>
+      <p>Discover our journey, our mission, and meet the team dedicated to transforming agriculture.</p>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <div class="container">
+    <div class="section">
+      <h2>Our Story</h2>
+      <p>Agrofield was founded with a vision to bridge traditional farming methods with modern technology. Our founders recognized the need for a comprehensive resource that empowers farmers and gardeners to achieve sustainable growth while preserving the environment.</p>
+    </div>
+    <div class="section">
+      <h2>Our Mission & Values</h2>
+      <p>We strive to provide up-to-date insights, research, and practical tips to help you make informed decisions. Transparency, innovation, and community collaboration are at the heart of everything we do.</p>
+    </div>
+    <div class="section">
+      <h2>Meet Our Team</h2>
+      <p>Our team comprises agricultural experts, researchers, and enthusiasts who work tirelessly to deliver quality content. We believe in continuous learning and sharing knowledge to foster a vibrant community of sustainable agriculture advocates.</p>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Agrofield. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="#">&#x1F30E;</a>
+      <a href="#">&#x1F426;</a>
+      <a href="#">&#x1F4F1;</a>
+    </div>
+  </footer>
+  
+  <!-- CSS-only Sign In Modal -->
+  <div id="signInModal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <h2>Sign In</h2>
+      <form method="post" action="/signin">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Sign In">
+      </form>
+    </div>
+  </div>
+  
+  <!-- CSS-only Sign Up Modal -->
+  <div id="signUpModal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <h2>Sign Up</h2>
+      <form method="post" action="/signup">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Sign Up">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
